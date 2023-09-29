@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GifsService } from '../services/gifs.service';
 
 @Component({
   selector: 'app-gifs-page',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GifsPageComponent implements OnInit {
 
-  constructor() { }
+  limit: number = 20;
+  constructor(private gifsService:GifsService) { }
 
   ngOnInit(): void {
   }
-
+  changeLimit(){
+    console.log(this.limit);
+    
+    this.gifsService.changeLimit(this.limit);
+  }
 }

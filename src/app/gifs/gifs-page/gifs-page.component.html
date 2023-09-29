@@ -1,8 +1,13 @@
 
 <div class="row p-3">
+    <h1>filters</h1>
+    <div class="input-group input-group-sm mb-3" style="width: 18rem;">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Gifs limit</span>
+        <input (change)="changeLimit()" [(ngModel)]="limit" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+      </div>
     <app-busqueda></app-busqueda>
+
 </div>
-    <hr />
 <div class="row">
     <div class="col">
         <app-resultados></app-resultados>

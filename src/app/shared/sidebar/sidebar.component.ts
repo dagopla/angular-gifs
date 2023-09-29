@@ -13,10 +13,13 @@ export class SidebarComponent  {
   }
 
   SelecionarSidebar(itemH: string): void{
+    this.gifsService.page = 0;
     this.gifsService.buscarGifs(itemH);
   }
 
   constructor(private gifsService: GifsService) { }
 
-
+  cleanLocal(){
+   this.gifsService.cleanLocal();
+  }
 }

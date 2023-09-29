@@ -1,14 +1,16 @@
 <div class="bg-dark border-right p-3" id="sidebar">
-    <h3 class="text-light">Gifs-App</h3>
+    <h3 class="text-light">Gifs</h3>
     <hr class="text-white">
+    <h2 class="text-light fs-6">Historial</h2>
     <div class="list-group list-reset">
         <a href="#" class="list-group-item
-        list-group-item-action"
-        *ngFor="let itemH of historial"
-        (click)="SelecionarSidebar(itemH)"
-        >
-        {{itemH | titlecase}}
+        list-group-item-action" *ngFor="let itemH of historial" (click)="SelecionarSidebar(itemH)">
+            {{itemH | titlecase}}
         </a>
+    </div>
+    <div class="d-flex justify-content-center">
+
+        <button (click)="cleanLocal()" class="btn btn-warning m-2">Clean</button>
     </div>
 
 </div>
